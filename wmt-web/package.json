@@ -18,8 +18,10 @@
     "govuk_template_jinja": "^0.18.2",
     "gulp": "^3.9.1",
     "gulp-sass": "^2.3.2",
+    "knex": "^0.12.7",
+    "nunjucks": "^2.0.1",
     "path": "^0.12.7",
-    "serve-favicon": "~2.3.0",
-    "nunjucks": "^2.0.1"
+    "pg": "^6.1.2",
+    "serve-favicon": "~2.3.0"
   }
 }

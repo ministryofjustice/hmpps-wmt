@@ -1,0 +1,13 @@
+{
+    "name": "wmt",
+    "version": "0.0.1",
+    "scripts": {
+        "create-db": "docker-compose up",
+        "migrations": "knex migrate:latest --env migrations",
+        "rollback": "knex migrate:rollback --env migrations"
+    },
+    "dependencies": {
+        "knex": "^0.12.7",
+        "pg": "^6.1.2"
+    }
+}

@@ -5,7 +5,7 @@ the WMT database to the end user.
 It is a node.js application using the express web framework.
 
 ## Prerequisites
-- Node v7.6.x
+- Node v6.10.0 (managed using [nvm](https://github.com/creationix/nvm))
 
 ## Getting Started
 ```
