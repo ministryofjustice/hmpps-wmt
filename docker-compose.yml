@@ -1,0 +1,20 @@
+version: '2'
+
+volumes:
+  pg-data:
+    driver: local
+
+services:
+
+    # Development PostgreSQL database instance for use by other services
+    wmt-db:
+        image: postgres:9.6
+        ports:
+            - "5432:5432"
+        volumes:
+            - pg-data:/var/lib/postgresql/data
+        environment:
+            - POSTGRES_USER=wmt
+            - POSTGRES_PASSWORD=wmt
+            - POSTGRES_DB=wmt_db
+        
