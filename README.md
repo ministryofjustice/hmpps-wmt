@@ -13,3 +13,12 @@ environment.
 
 Running `docker-compose up` in the base directory of this repository will launch
 the PostgreSQL database instance used by the other application components.
+
+## Database Setup
+
+In order to create the schema and populate it with data run the following
+commands:
+```
+npm run-script migrations
+npm run-script seed-data
+```
