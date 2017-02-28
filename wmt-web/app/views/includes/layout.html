@@ -1,0 +1,25 @@
+{% extends "govuk_template.html" %}
+
+{% block head %}
+  {% include "includes/head.html" %}
+{% endblock %}
+
+{% block cookie_message %}
+<p>{{'GOV.UK uses cookies to make the site simpler.'}} </p>
+{% endblock %}
+
+{% block header_class %}
+  with-proposition
+{% endblock %}
+
+{% block footer_support_links %}
+<ul>
+  <li><a target="_blank" href="/cookies">Cookies</a></il>
+  <li><a target="_blank" href="/terms-and-conditions">Terms and conditions</a></il>
+  <li><a target="_blank" href="/feedback">Feedback</a></il>
+  <li><a target="_blank" href="/technical-help">Technical help</a></li>
+</ul>
+{% endblock %}
+
+{% block body_end %}
+{% endblock %}

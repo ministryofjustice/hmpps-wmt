@@ -2,6 +2,8 @@ const config = require('../config')
 const express = require('express')
 const nunjucks = require('express-nunjucks')
 const favicon = require('serve-favicon')
+const path = require('path')
+const routes = require('./routes/routes')
 
 var app = express()
 
@@ -29,22 +31,10 @@ app.use(function (req, res, next) {
   next()
 })
 
-// Add variables that are available in all views.
-app.use(function (req, res, next) {
-  res.locals.serviceName = serviceName
-  res.locals.releaseVersion = 'v' + releaseVersion
-  next()
-})
-
 // Log each HTML request and it's response.
 app.use(function (req, res, next) {
   // Log response started.
-  log.info({ request: req }, 'Route Started.')
-
-  // Log response finished.
-  onFinished(res, function () {
-    log.info({ response: res }, 'Route Complete.')
-  })
+  console.log( req.path, 'called.')
   next()
 })
 
@@ -63,7 +53,7 @@ app.use(function (req, res, next) {
 
 // Development error handler.
 app.use(function (err, req, res, next) {
-  log.error({error: err})
+  console.log({error: err})
   res.status(err.status || 500)
   if (err.status === 404) {
     res.render('includes/error-404')

@@ -1,3 +1,4 @@
+// example of domain objects in node
 const ValidationError = require('../errors/validation-error')
 const FieldValidator = require('../validators/field-validator')
 const ErrorHandler = require('../validators/error-handler')

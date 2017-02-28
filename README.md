@@ -3,8 +3,8 @@ NOMS Workload Management Tool
 
 ## Prerequisites
 
-- Vagrant
-- Ruby (TODO version)
+- Docker
+- Node v6.x.x + 
 
 ## Docker
 

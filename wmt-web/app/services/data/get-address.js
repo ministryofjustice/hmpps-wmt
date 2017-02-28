@@ -1,3 +1,4 @@
+// Example of data access using knex
 const config = require('../../../knexfile').extweb
 const knex = require('knex')(config)
 const getRepeatEligibility = require('./get-repeat-eligibility')
