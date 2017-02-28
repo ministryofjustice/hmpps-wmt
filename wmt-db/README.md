@@ -1,1 +1,0 @@
-# WMT Alpha Database Scripts
