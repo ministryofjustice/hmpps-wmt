@@ -1,0 +1,22 @@
+{% extends "includes/layout.html" %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+<h2 class="heading-large">
+    View your caselaod utilisation
+</h2>
+
+<div id="plotly-div-line"></div>
+
+</main>
+{% endblock %}
+
+{% block body_end %}
+    <script type="text/javascript">
+        var caseloadUtilisationsString = {{ utilisations | dump }}
+    </script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="/public/javascripts/my-utilisations.js"></script>
+{% endblock %}
