@@ -1,0 +1,14 @@
+{
+    "name": "workload-management-tool",
+    "version": "0.0.1",
+    "scripts": {
+        "create-db": "docker-compose up",
+        "migrations": "knex migrate:latest --env development",
+        "rollback": "knex migrate:rollback --env development",
+        "seed-data": "knex seed:run --env development"
+    },
+    "dependencies": {
+        "knex": "^0.12.7",
+        "pg": "^6.1.2"
+    }
+}
