@@ -1,4 +1,4 @@
-# Docker for a minimal PySpark instance for Development
+# Docker file defining a minimal PySpark instance for development
 
 FROM ubuntu:14.04
 MAINTAINER Tom Swann "t.swann@kainos.com"
@@ -11,8 +11,6 @@ RUN apt-get -y install software-properties-common python-software-properties
 # JAVA
 RUN add-apt-repository ppa:webupd8team/java
 RUN apt-get update
-
-# Because Oracle
 RUN echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | sudo debconf-set-selections
 RUN apt-get -y install oracle-java8-installer
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
