@@ -7,6 +7,12 @@ It is a node.js application using the express web framework.
 ## Prerequisites
 - Node v6.10.0 (managed using [nvm](https://github.com/creationix/nvm))
 
+On OSX (using [homebrew](https://brew.sh/)):
+
+- `brew install nvm`
+- Follow the instructions in the brew installer output
+- `nvm install 6.10.0`
+
 ## Getting Started
 ```
 npm install
