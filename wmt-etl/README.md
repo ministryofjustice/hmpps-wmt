@@ -33,7 +33,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 From the base project directory execute the following command to set up your environment:
 
-`mkvirtualenv -a wmt-spark -r wmt-spark/requirements.txt` 
+`mkvirtualenv -a wmt-spark -r wmt-spark/requirements.txt wmt-spark` 
 
 All subsequent times you want to work on this project you should just need to type:
 

@@ -5,7 +5,6 @@ volumes:
     driver: local
 
 services:
-
     # Development PostgreSQL database instance for use by other services
     wmt-db:
         expose:
