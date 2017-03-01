@@ -17,6 +17,8 @@ else
     printf "There were no Docker containers to delete.\n"
 fi
 
+docker volume ls -q | xargs docker volume rm
+
 # Delete all Docker images.
 if [ -n "$DOCKER_IMAGES" ]; then
     printf "Docker Images: \n%s\n\n" "$DOCKER_IMAGES"
