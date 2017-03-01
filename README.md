@@ -19,6 +19,9 @@ the PostgreSQL database instance used by the other application components.
 In order to create the schema and populate it with data run the following
 commands:
 ```
+cd wmt-database
+npm install
 npm run-script migrations
 npm run-script seed-data
+cd -
 ```
