@@ -5,7 +5,7 @@
 <main id="content" role="main">
 
 <h2 class="heading-large">
-    View your caselaod utilisation
+    View your caseload utilisation
 </h2>
 
 <div id="plotly-div-line"></div>
@@ -15,7 +15,7 @@
 
 {% block body_end %}
     <script type="text/javascript">
-        var caseloadUtilisationsString = {{ utilisations | dump }}
+        var caseloadUtilisationsString = '{{ utilisations | dump | safe }}'
     </script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="/public/javascripts/my-utilisations.js"></script>
