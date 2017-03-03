@@ -4,7 +4,8 @@
 
 var routes = [
   require('./index'),
-  require('./caseload-utilisation')
+  require('./caseload-utilisation'),
+  require('./login')
 ]
 
 module.exports = function (router) {

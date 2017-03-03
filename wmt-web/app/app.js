@@ -2,9 +2,13 @@ const express = require('express')
 const nunjucks = require('express-nunjucks')
 const favicon = require('serve-favicon')
 const path = require('path')
+const bodyParser = require('body-parser')
 const routes = require('./routes/routes')
+const authentication = require('./authentication')
 
 var app = express()
+
+authentication(app);
 
 var packageJson = require('../package.json')
 var developmentMode = app.get('env') === 'development'
@@ -24,6 +28,8 @@ app.use('/public', express.static(path.join(__dirname, 'govuk_modules', 'govuk_t
 app.use('/public', express.static(path.join(__dirname, 'govuk_modules', 'govuk_frontend_toolkit')))
 app.use(favicon(path.join(__dirname, 'govuk_modules', 'govuk_template', 'images', 'favicon.ico')))
 
+app.use(bodyParser.urlencoded({ extended: true }))
+
 // Send assetPath to all views.
 app.use(function (req, res, next) {
   res.locals.asset_path = '/public/'
@@ -33,7 +39,7 @@ app.use(function (req, res, next) {
 // Log each HTML request and it's response.
 app.use(function (req, res, next) {
   // Log response started.
-  console.log( req.path, 'called.')
+  console.log( req.method, req.path, 'called.')
   next()
 })
 
