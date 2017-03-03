@@ -1,7 +1,7 @@
 module.exports = {
   // DB
-  DATABASE_SERVER: '192.168.99.100',
-  DATABASE: 'wmt_db',
-  DATABASE_USERNAME: 'wmt',
-  DATABASE_PASSWORD: 'wmt',
+  DATABASE_SERVER: process.env.WMT_DB_SERVER || 'localhost',
+  DATABASE: process.env.WMT_DB_NAME || 'wmt_db',
+  DATABASE_USERNAME: process.env.WMT_DB_USERNAME || 'wmt',
+  DATABASE_PASSWORD: process.env.WMT_DB_PASSWORD || 'wmt',
 }
