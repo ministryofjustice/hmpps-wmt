@@ -22,15 +22,17 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
+Run `source ~/.bash_profile` in order for these changes to take immediate effect
+
 From the base project directory execute the following command to set up your environment:
 
-`mkvirtualenv -a wmt-etl -r wmt-spark/requirements.txt wmt-etl` 
+`mkvirtualenv -a wmt-etl -r requirements.txt wmt-etl` 
 
 All subsequent times you want to work on this project you should just need to type:
 
 `workon wmt-etl`
 
-And it will switch to this virtualenv and take you to the ./wmt-spark directory.
+And it will switch to this virtualenv and take you to the ./wmt-etl directory.
 
 ### Running the ETL Job
 
