@@ -1,7 +1,10 @@
 import pandas as pd
 from sqlalchemy import create_engine
+import config
 
-db = create_engine('postgresql://wmt:wmt@192.168.99.100/wmt_db')
+DB_CONNECTION_STRING = 'postgresql://{0}:{1}@{2}/{3}'.format(config.DB_USERNAME, config.DB_PASSWORD, config.DB_SERVER, config.DB_NAME)
+
+db = create_engine(DB_CONNECTION_STRING)
 WORKBOOK_FILEPATH = './data/WMT_Extract_sample.xlsx'
 SUMMARY_SHEET = 'WMT_Extract'
 COURT_REP_SHEET = 'Court_Reports'
