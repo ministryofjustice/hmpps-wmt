@@ -5,8 +5,28 @@
   "engines": {
     "node": "6.x.x"
   },
+  "standard": {
+    "ignore": [
+      "node_modules/*",
+      "app/assets/javascripts/*.js",
+      "app/public/javascripts/my-utilisations.js",
+      "jquery*.js"
+    ],
+    "globals": [
+      "Plotly",
+      "describe",
+      "before",
+      "beforeEach",
+      "afterEach",
+      "after",
+      "it",
+      "browser",
+      "$"
+    ]
+  },
   "scripts": {
     "start": "gulp",
+    "test": "standard",
     "migrations": "knex migrate:latest --env migrations",
     "rollback": "knex migrate:rollback --env migrations"
   },
@@ -27,5 +47,8 @@
     "path": "^0.12.7",
     "pg": "^6.1.2",
     "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "standard": "^9.0.0"
   }
 }
