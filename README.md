@@ -1,6 +1,9 @@
 # noms-wmt-alpha
 NOMS Workload Management Tool
 
+[![Build Status](https://travis-ci.org/ministryofjustice/noms-wmt-alpha.svg?branch=master)](https://travis-ci.org/ministryofjustice/noms-wmt-alpha.svg?branch=master)
+[![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+
 ## Prerequisites
 
 - Docker
