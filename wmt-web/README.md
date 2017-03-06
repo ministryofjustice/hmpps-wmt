@@ -40,4 +40,3 @@ use the following steps need to be completed:
 
 - Supply the identy providers certificate for verification
 - Implement cookie based session management (using express-session and passport)
-- Extract user details from the database on successful authentication
