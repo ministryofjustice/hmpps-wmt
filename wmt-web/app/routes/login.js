@@ -1,5 +1,4 @@
 const passport = require('passport')
-
 module.exports = function (router) {
   router.post('/login/callback',
     passport.authenticate('saml'), function (req, res) {
