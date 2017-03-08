@@ -1,7 +1,8 @@
 
 class Task {
-  constructor (taskId, taskType, additionalData, dateCreated, dateProcessed, status) {
+  constructor (taskId, agent, taskType, additionalData, dateCreated, dateProcessed, status) {
     this.id = taskId
+    this.submittingAgent = agent
     this.type = taskType
     this.additionalData = additionalData
     this.dateCreated = dateCreated

@@ -9,6 +9,6 @@ module.exports = {
   DATABASE_PASSWORD: process.env.WMT_DB_PASSWORD || 'wmt',
 
   // Worker
-  ASYNC_WORKER_CRON: process.env.WMT_ASYNC_WORKER_CRON || '*/10 * * * * *', // default every 10 seconds
+  ASYNC_WORKER_CRON: process.env.WMT_ASYNC_WORKER_CRON || '*/5 * * * * *', // default every 5 seconds
   ASYNC_WORKER_BATCH_SIZE: process.env.WMT_ASYNC_WORKER_BATCH_SIZE || '5'
 }
