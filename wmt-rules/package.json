@@ -1,0 +1,17 @@
+{
+  "name": "wmt-rules",
+  "version": "0.1.0",
+  "description": "WMT business rules",
+  "engines": {
+    "node": "6.x.x"
+  },
+  "main": "app.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}
