@@ -1,0 +1,5 @@
+[
+  { "tiers": [ { "type": "community", "rank": "1C", "points": 11 }, { "type": "community", "rank": "2", "points": 4 }, { "type": "license", "rank": "5", "points": 7 }, { "type": "custody", "rank": "3", "points": 13 } ] },
+  { "tiers": [ { "type": "community", "rank": "1C", "points": 12 }, { "type": "community", "rank": "2", "points": 6 }, { "type": "license", "rank": "6", "points": 20 }, { "type": "custody", "rank": "3D", "points": 10 } ] },
+  { "tiers": [ { "type": "community", "rank": "1C", "points": 14 }, { "type": "community", "rank": "2", "points": 4 }, { "type": "license", "rank": "0", "points": 3 }, { "type": "custody", "rank": "3N", "points": 15 } ] }
+]

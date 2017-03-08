@@ -13,3 +13,5 @@ class Tier {
     return true 
   }
 }
+
+module.exports = Tier

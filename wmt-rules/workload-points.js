@@ -1,4 +1,4 @@
-const tier = require('./workload/domain/tier')
+const Tier = require('./workload/domain/tier')
 const aggregateTierPoints = require('./workload/aggregate-tier-points')
 const _ = require('lodash')
 
