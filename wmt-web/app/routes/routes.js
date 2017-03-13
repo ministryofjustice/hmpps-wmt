@@ -5,6 +5,7 @@
 var routes = [
   require('./index'),
   require('./caseload-utilisation'),
+  require('./caseload-utilisation-comparison'),
   require('./login')
 ]
 

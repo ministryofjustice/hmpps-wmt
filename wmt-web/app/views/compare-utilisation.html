@@ -1,0 +1,39 @@
+{% extends "includes/layout.html" %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+<h2 class="heading-large">
+    Comparing John and Jane's workload utilisation
+</h2>
+
+<div id="plotly-div-line">
+    <table class="table-visualisation">
+        <tr>
+        <th> </th>
+        {% for heading in utilisationTable.headings %}
+            <th>{{ heading }}</th>
+        {% endfor %}
+        </tr>
+        {% for row in utilisationTable.rows %}
+        <tr>
+        <th> {{row.label}} </th>
+        {% for value in row.values %}
+        <td> {{value}}% </td>
+        {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+</main>
+{% endblock %}
+
+{% block body_end %}
+    <script type="text/javascript">
+        var utilisationTable = {{ utilisationTable | dump | safe }};
+    </script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="/public/javascripts/compare-utilisations.js"></script>
+{% endblock %}
