@@ -11,7 +11,7 @@ module.exports = function (schema, batchSize) {
     .then(function (results) {
       var tasks = []
       var ids = []
-      if (results) {
+      if (results !== 'undefined' && results.length > 0) {
         for (var result of results) {
           ids.push(result.id)
           tasks.push(new Task(
