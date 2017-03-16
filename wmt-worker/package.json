@@ -1,0 +1,24 @@
+{
+  "name": "wmt-worker",
+  "version": "0.1.0",
+  "description": "WMT async worker appliction",
+  "main": "start.js",
+  "scripts": {
+    "start": "node start.js",
+    "test": "standard"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "wmt-rules": "../wmt-rules",
+    "bluebird": "^3.5.0",
+    "bunyan": "^1.8.8",
+    "bunyan-prettystream": "^0.1.3",
+    "cron": "^1.2.1",
+    "knex": "^0.12.7",
+    "pg": "^6.1.3"
+  },
+  "devDependencies": {
+    "standard": "^9.0.1"
+  }
+}

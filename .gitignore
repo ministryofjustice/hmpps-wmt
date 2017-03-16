@@ -6,3 +6,5 @@ pg-data/
 
 # Editor stuff
 .vscode
+
+*.log
