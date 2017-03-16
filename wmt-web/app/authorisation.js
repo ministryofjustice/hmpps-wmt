@@ -1,3 +1,4 @@
+const config = require('../config')
 
 function isAuthenticated (req) {
   if (!req.user) {
@@ -8,6 +9,7 @@ function isAuthenticated (req) {
 }
 
 function isAdmin (req) {
+  if (!config.AUTHENTICATION_ENABLED) return
   isAuthenticated(req)
 
   if (!req.user.user_roles.includes('admin')) {

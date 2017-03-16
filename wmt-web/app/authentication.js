@@ -7,10 +7,11 @@ const getRoles = require('./services/data/get-user-roles')
 var SamlStrategy = require('passport-saml').Strategy
 
 module.exports = function (app) {
+  if (!config.AUTHENTICATION_ENABLED) return
+
   passport.serializeUser(function (user, done) {
     var email = user['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name']
     var displayName = user['http://schemas.microsoft.com/identity/claims/displayname']
-    console.log(user)
     getRoles(email).then(function (roles) {
       done(null, {
         name: displayName,

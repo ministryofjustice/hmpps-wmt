@@ -5,5 +5,6 @@ module.exports = {
   DATABASE_USERNAME: process.env.WMT_DB_USERNAME || 'wmt',
   DATABASE_PASSWORD: process.env.WMT_DB_PASSWORD || 'wmt',
 
+  AUTHENTICATION_ENABLED: false,
   SESSION_SECRET: 'secret'
 }
