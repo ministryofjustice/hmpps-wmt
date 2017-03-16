@@ -6,6 +6,10 @@ $path: "/public/images/";
 // Take a look at in app/assets/sass/patterns/ to see which files are imported.
 // Autocomplete styles from https://github.com/ministryofjustice/prison-visits-public
 
+.js-enabled .non-javascript {
+    display: none;
+}
+
 @mixin respond-to($media) {
   @if $media==handhelds {
     @media only screen and (max-width: 568px) {

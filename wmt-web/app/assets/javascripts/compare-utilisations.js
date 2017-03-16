@@ -91,6 +91,3 @@ Plotly.plot('plotly-div-line', {
     data: data,
     layout: layout
 });
-
-const elements = document.getElementsByClassName("table-visualisation");
-while (elements.length > 0) elements[0].remove();
