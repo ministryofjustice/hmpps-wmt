@@ -1,20 +1,26 @@
+const getCaseloadUtilisationForPerson = require('./get-caseload-utilisation')
+
 module.exports = function (user1Id, user2Id, year) {
-  return {
-    then: function (callback) {
-      callback(
-        {
-          headings: ['January', 'Feburary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-          rows: [
-            {
-              label: "Jane Smith's utilisation",
-              values: [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100]
-            },
-            {
-              label: "John Smith's utilisation",
-              values: [90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90]
-            }
-          ]
-        })
-    }
-  }
+  return getCaseloadUtilisationForPerson(user1Id, year).then(function (user1Utilisation) {
+    return getCaseloadUtilisationForPerson(user2Id, year).then(function (user2Utilisation) {
+      var comparisonTable = { headings: [], rows: [] }
+       // TODO add id -> name lookup
+      var rowToAdd = { label: "John Smith's Utilisation (%)", values: [] }
+
+      user1Utilisation.forEach(function (result) {
+        comparisonTable.headings.push(result['month'])
+        rowToAdd.values.push(result['utilisation_percentage'])
+      })
+      comparisonTable.rows.push(rowToAdd)
+
+       // TODO add id -> name lookup
+      rowToAdd = { label: "Jane Smith's Utilisation (%)", values: [] }
+      user2Utilisation.forEach(function (result) {
+        rowToAdd.values.push(result['utilisation_percentage'])
+      })
+      comparisonTable.rows.push(rowToAdd)
+
+      return comparisonTable
+    })
+  })
 }

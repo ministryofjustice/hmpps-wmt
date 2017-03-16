@@ -1,7 +1,7 @@
 
 trace1 = {
-    x: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], 
-    y: JSON.parse(caseloadUtilisationsString), 
+    x: utilisationTable.headings,
+    y: utilisationTable.values, 
     hoverinfo: 'x+y', 
     line: {width: 3.5}, 
     marker: {

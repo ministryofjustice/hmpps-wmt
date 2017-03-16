@@ -1,4 +1,4 @@
-const getCaseloadUtilisation = require('../services/data/get-caseload-utilisation')
+const getCaseloadUtilisation = require('../services/data/get-utilisation-table-data')
 const authorisation = require('../authorisation')
 
 module.exports = function (router) {
