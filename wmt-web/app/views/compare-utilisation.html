@@ -8,23 +8,24 @@
     Comparing John and Jane's workload utilisation
 </h2>
 
-<div id="plotly-div-line">
-    <table class="non-javascript">
-        <tr>
-        <th> </th>
-        {% for heading in utilisationTable.headings %}
-            <th>{{ heading }}</th>
-        {% endfor %}
-        </tr>
-        {% for row in utilisationTable.rows %}
-        <tr>
-        <th> {{row.label}} </th>
-        {% for value in row.values %}
-        <td> {{value}}% </td>
-        {% endfor %}
-        </tr>
-        {% endfor %}
-    </table>
+<table class="non-javascript">
+    <tr>
+    <th role="presentation" scope="col"> </th>
+    {% for heading in utilisationTable.headings %}
+        <th scope="col">{{ heading }}</th>
+    {% endfor %}
+    </tr>
+    {% for row in utilisationTable.rows %}
+    <tr>
+    <th scope="row"> {{row.label}} </th>
+    {% for value in row.values %}
+    <td> {{value}}% </td>
+    {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+
+<div role="presentation" id="plotly-div-line">
 </div>
 
 </main>
