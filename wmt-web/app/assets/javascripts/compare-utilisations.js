@@ -1,7 +1,6 @@
-
 trace1 = {
     x: utilisationTable.headings,
-    y: utilisationTable.values, 
+    y: utilisationTable.rows[0].values, 
     hoverinfo: 'x+y', 
     line: {width: 3.5}, 
     marker: {
@@ -9,10 +8,23 @@ trace1 = {
         size: 9
     }, 
     mode: 'lines+markers', 
-    name: 'Utilisation %', 
+    name: utilisationTable.rows[0].label,
     type: 'scatter', 
 };
-data = [trace1];
+trace2 = {
+    x: utilisationTable.headings,
+    y: utilisationTable.rows[1].values, 
+    hoverinfo: 'x+y', 
+    line: {width: 3.5}, 
+    marker: {
+        line: {width: -0.5}, 
+        size: 9
+    }, 
+    mode: 'lines+markers', 
+    name: utilisationTable.rows[1].label,
+    type: 'scatter', 
+};
+data = [trace1, trace2];
 layout = {
     autosize: true, 
     dragmode: 'pan', 
@@ -49,7 +61,6 @@ layout = {
     }
     ], 
     showlegend: true, 
-    title: 'Caseload Utilisation', 
     xaxis: {
         autorange: true, 
         fixedrange: true, 

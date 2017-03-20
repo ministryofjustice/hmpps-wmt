@@ -3,6 +3,7 @@ exports.up = function(knex, Promise) {
     return knex.schema.createTable('month_lookup', function (table) {
         table.increments('id').primary();
         table.integer('ordinal_value');
+        table.string('name');
         table.integer('year');
     }).catch(function (error) {
         console.log(error);

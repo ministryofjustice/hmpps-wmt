@@ -15,7 +15,7 @@
 
 {% block body_end %}
     <script type="text/javascript">
-        var caseloadUtilisationsString = '{{ utilisations | dump | safe }}'
+        var utilisationTable = {{ utilisations | dump | safe }}
     </script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="/public/javascripts/my-utilisations.js"></script>
