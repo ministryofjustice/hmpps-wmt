@@ -8,9 +8,9 @@ class Tier {
     this.isValid()
   }
 
-  isValid() {
+  isValid () {
     // TODO: Implement generic validation handler a la APVS
-    return true 
+    return true
   }
 }
 

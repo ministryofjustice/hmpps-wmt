@@ -1,4 +1,4 @@
 module.exports = {
-    PSO: 35,
-    PO: 37
+  PSO: 35,
+  PO: 37
 }
