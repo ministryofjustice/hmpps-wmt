@@ -12,13 +12,10 @@ module.exports = function (offenderManagerTypeId, contractedHours,
     return 0
   }
 
-  var isPSO = _.includes(offenderManagerTypes.PSO_IDS, offenderManagerTypeId)
-  var defaultHours = 0
-
-  if (isPSO) {
-    defaultHours = defaultHoursLookup.PSO
+  if (_.includes(offenderManagerTypes.PSO_IDS, offenderManagerTypeId)) {
+    var defaultHours = defaultHoursLookup.PSO
   } else {
-    defaultHours = defaultHoursLookup.PO
+    var defaultHours = defaultHoursLookup.PO
   }
 
   if (contractedHours == null) {
