@@ -4,7 +4,7 @@ const _ = require('lodash')
 
 module.exports = calculateWorkloadPoints
 
-function calculateWorkloadPoints(orgUnit, orgUnitWorkloads, wmtWeightings) {
+function calculateWorkloadPoints (orgUnit, orgUnitWorkloads, wmtWeightings) {
   var orgUnit = orgUnit
   var workloads = orgUnitWorkloads
   var weightings = wmtWeightings
@@ -20,7 +20,7 @@ function calculateWorkloadPoints(orgUnit, orgUnitWorkloads, wmtWeightings) {
 
   // Business rules encapsulated in private functions calling
   // workload/specific-rule-module
-  function calculateWorkloadPoints(workloads, weightings) {
+  function calculateWorkloadPoints (workloads, weightings) {
     var points = []
     _.each(workloads, (workload) => {
       var tiers = []
@@ -32,4 +32,3 @@ function calculateWorkloadPoints(orgUnit, orgUnitWorkloads, wmtWeightings) {
     return points
   }
 }
-

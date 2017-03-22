@@ -12,7 +12,7 @@ module.exports = function (tiers) {
     custodyPoints: sumTierType(tiers, tierTypes.CUSTODY)
   }
 
-  function sumTierType(tiers, tierType) {
+  function sumTierType (tiers, tierType) {
     return _(tiers).filter(t => t.type == tierType)
                   .map(t => t.points)
                   .sum()
