@@ -1,5 +1,7 @@
-# noms-wmt-alpha
-NOMS Workload Management Tool
+# HMPPS-WMT
+HMPPS Workload Management Tool
+
+This repository contains the technical spikes for Alpha and Beta on the WMT project. It also hosts the project wiki for documenting our spikes, tooling and design decision.
 
 [![Build Status](https://travis-ci.org/ministryofjustice/noms-wmt-alpha.svg?branch=master)](https://travis-ci.org/ministryofjustice/noms-wmt-alpha.svg?branch=master)
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
